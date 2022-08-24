@@ -82,6 +82,7 @@ class HashTagEditableText extends EditableText {
     Iterable<String>? autofillHints,
     String? restorationId,
     double? cursorHeight,
+    this.allowEmoji = false,
   }) : super(
           key: key,
           focusNode: (focusNode) ?? FocusNode(),
@@ -150,6 +151,8 @@ class HashTagEditableText extends EditableText {
 
   final bool decorateAtSign;
 
+  final bool allowEmoji;
+
   @override
   HashTagEditableTextState createState() => HashTagEditableTextState();
 }
@@ -169,9 +172,11 @@ class HashTagEditableTextState extends EditableTextState {
   void initState() {
     super.initState();
     detector = Detector(
-        textStyle: widget.style,
-        decoratedStyle: widget.decoratedStyle,
-        decorateAtSign: widget.decorateAtSign);
+      textStyle: widget.style,
+      decoratedStyle: widget.decoratedStyle,
+      decorateAtSign: widget.decorateAtSign,
+      allowEmoji: widget.allowEmoji,
+    );
     widget.controller.addListener(() {
       _onValueUpdated.call();
     });

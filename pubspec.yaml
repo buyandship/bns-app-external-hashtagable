@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   provider: ^6.0.0
+  emoji_regex: ^0.0.2
 
 dev_dependencies:
   flutter_test:
