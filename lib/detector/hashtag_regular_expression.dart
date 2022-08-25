@@ -33,12 +33,12 @@ const hashTagContentLetters = _symbols +
 ///
 /// Supports English, Japanese, Korean, Spanish, Arabic, and Thai
 final hashTagRegExp = RegExp(
-  "(?!\\n)(?:^|\\s)(#([$hashTagContentLetters]+))",
+  "(?!\\n)(#([$hashTagContentLetters]+))",
   multiLine: true,
 );
 
 /// Regular expression when you select decorateAtSign
 final hashTagAtSignRegExp = RegExp(
-  "(?!\\n)(?:^|\\s)([#@]([$hashTagContentLetters]+))",
+  "(?!\\n)([#@]([$hashTagContentLetters]+))",
   multiLine: true,
 );
