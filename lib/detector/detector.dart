@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
-import 'package:emoji_regex/emoji_regex.dart';
-
 import 'hashtag_regular_expression.dart';
+
+import '../emoji_regex.dart';
 
 /// DataModel to explain the unit of word in detection system
 class Detection extends Comparable<Detection> {
@@ -82,7 +82,7 @@ class Detector {
   /// Return the list of decorations with tagged and untagged text
   List<Detection> getDetections(String copiedText) {
     /// Text to change emoji into replacement text
-    final fullWidthRegExp = emojiRegexText();
+    final fullWidthRegExp = emojiRegex();
 
     final fullWidthRegExpMatches = fullWidthRegExp.allMatches(copiedText).toList();
     final tokenRegExp = RegExp(r'[・ぁ-んーァ-ヶ一-龥\u1100-\u11FF\uAC00-\uD7A3０-９ａ-ｚＡ-Ｚ　]');
