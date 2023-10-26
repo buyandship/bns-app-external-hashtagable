@@ -5,7 +5,7 @@ import 'hashtag_regular_expression.dart';
 import '../emoji_regex.dart';
 
 /// DataModel to explain the unit of word in detection system
-class Detection extends Comparable<Detection> {
+class Detection implements Comparable<Detection> {
   Detection({required this.range, this.style, this.emojiStartPoint});
 
   final TextRange range;
