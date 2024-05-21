@@ -1,12 +1,11 @@
 name: example
 description: Widget and function to implement hashtag-decorated EditableText and RichText. Decorate the words which start with `#`
 version: 1.0.0
-author: Santa Takahashi <sun.jp.0212@gmail.com>
 homepage: https://github.com/santa112358/hashtagable
 repository: https://github.com/santa112358/hashtagable
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -21,13 +20,11 @@ dependency_overrides:
   hashtagable:
     path: ../
 
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
-
 # To add assets to your package, add an assets section, like this:
 # assets:
 #  - images/a_dot_burr.jpeg
